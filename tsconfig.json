@@ -1,16 +1,29 @@
 {
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "commonjs",
     "declaration": true,
     "outDir": "./lib",
-    "strict": true
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowUnreachableCode": false,
+    "lib": [
+      "es2018",
+      "dom"
+    ],
   },
-  "include": [
-    "src"
-  ],
   "exclude": [
     "node_modules",
-    "**/__tests__/*"
+    "**/__tests__/*",
+  ],
+  "include": [
+    "src"
   ]
 }

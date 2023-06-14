@@ -1,10 +1,13 @@
 {
   "name": "ts-custom-pkg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom TS package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "keywords": ["Package", "TypeScript"],
+  "keywords": [
+    "Package",
+    "TypeScript"
+  ],
   "author": "matthew2564",
   "engines": {
     "node": ">=18.0.0 <19.0.0",
@@ -21,11 +24,11 @@
     "format": "echo 'Would run foramtting (prettier) here'",
     "lint": "echo 'Would run linting (eslint) here'",
     "test": "jest --config jestconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -38,5 +41,9 @@
   "bugs": {
     "url": "https://github.com/matthew2564/ts-custom-pkg/issues"
   },
-  "homepage": "https://github.com/matthew2564/ts-custom-pkg#readme"
+  "homepage": "https://github.com/matthew2564/ts-custom-pkg#readme",
+  "dependencies": {
+    "@wdio/cucumber-framework": "^8.11.0",
+    "ts-custom-pkg": "^1.0.0"
+  }
 }
