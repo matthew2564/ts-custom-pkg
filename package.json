@@ -20,7 +20,8 @@
     "typescript": "^5.1.3"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf lib",
     "format": "echo 'Would run foramtting (prettier) here'",
     "lint": "echo 'Would run linting (eslint) here'",
     "test": "jest --config jestconfig.json",
@@ -44,6 +45,7 @@
   "homepage": "https://github.com/matthew2564/ts-custom-pkg#readme",
   "dependencies": {
     "@wdio/cucumber-framework": "^8.11.0",
+    "rimraf": "^5.0.1",
     "ts-custom-pkg": "^1.0.0"
   }
 }
