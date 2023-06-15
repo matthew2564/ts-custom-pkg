@@ -1,6 +1,6 @@
-import {Then} from '@wdio/cucumber-framework';
+import {binding, then} from "cucumber-tsflow";
 
-export const checkEqualsTime = async (
+const checkEqualsTime = async (
     selector: string,
     falseCase: boolean,
     expectedText: string,
@@ -12,8 +12,15 @@ export const checkEqualsTime = async (
     });
 };
 
+@binding()
+class ThenSteps {
+    /**
+     *  @then(/^I expect that element "([^"]*)?"( not)* matches the time "([^"]*)?"$/)
+     */
+    @then(/^I expect that element "([^"]*)?"( not)* matches the time "([^"]*)?"$/)
+    public checkEqualsTime(action: string, falseCase: boolean, expectedText: string) {
+        return checkEqualsTime(action, falseCase, expectedText);
+    }
+}
 
-Then(
-    /^I expect that element "([^"]*)?"( not)* matches the time "([^"]*)?"$/,
-    checkEqualsTime,
-);
+export = ThenSteps;

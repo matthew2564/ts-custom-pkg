@@ -1,6 +1,6 @@
 {
   "name": "ts-custom-pkg",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A custom TS package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -45,6 +45,7 @@
   "homepage": "https://github.com/matthew2564/ts-custom-pkg#readme",
   "dependencies": {
     "@wdio/cucumber-framework": "^8.11.0",
+    "cucumber-tsflow": "^4.0.6",
     "rimraf": "^5.0.1",
     "ts-custom-pkg": "^1.0.0"
   }
