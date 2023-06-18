@@ -9,7 +9,7 @@ on:
 
 jobs:
   publish-second:
-    uses: .github/workflows/publish.yaml@main
+    uses: ./.github/workflows/publish.yaml@main
     with:
       WORKING_DIRECTORY: ${{ inputs.directory }}
       PACKAGE_NAME: 'ts-custom-pkg'
