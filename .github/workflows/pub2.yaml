@@ -1,4 +1,4 @@
-name: Publish package
+name: Publish package 2
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
         required: true
 
 jobs:
-  publish:
+  publish-second:
     uses: .github/workflows/publish.yaml
     with:
       WORKING_DIRECTORY: ${{ inputs.directory }}
