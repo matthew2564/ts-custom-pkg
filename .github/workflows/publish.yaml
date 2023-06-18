@@ -1,7 +1,7 @@
 name: Publish package
 
 on:
-  workflow_dispatch:
+  workflow_run:
     inputs:
       WORKING_DIRECTORY:
         required: true
