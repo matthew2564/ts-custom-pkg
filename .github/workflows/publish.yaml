@@ -9,6 +9,9 @@ on:
       PACKAGE_NAME:
         type: string
         required: true
+    secrets:
+      SUPER_SECRET:
+        required: true
 
 jobs:
   publish:

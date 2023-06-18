@@ -6,10 +6,15 @@ on:
       directory:
         description: 'Directory?'
         required: true
+      name:
+        description: 'name?'
+        required: true
 
 jobs:
   publish-second:
     uses: ./.github/workflows/publish.yaml
     with:
       WORKING_DIRECTORY: ${{ inputs.directory }}
-      PACKAGE_NAME: 'ts-custom-pkg'
+      PACKAGE_NAME: ${{ format('{0}-{1}', 'ts', name) }}
+    secrets:
+      SUPER_SECRET: "hello there"
