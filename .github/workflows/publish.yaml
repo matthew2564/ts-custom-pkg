@@ -48,6 +48,8 @@ jobs:
 
       - name: Version bump check
         run: |
+          echo ${{ inputs.WORKING_DIRECTORY }}
+          echo ${{ inputs.PACKAGE_NAME }}
           CURRENT_VERSION=$(node -p "require('./package.json').version")
           PREVIOUS_VERSION=$(npm view ${{ inputs.PACKAGE_NAME }} version)
           
