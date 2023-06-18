@@ -15,6 +15,6 @@ jobs:
     uses: ./.github/workflows/publish.yaml
     with:
       WORKING_DIRECTORY: ${{ inputs.directory }}
-      PACKAGE_NAME: ${{ format('{0}-{1}', 'ts', name) }}
+      PACKAGE_NAME: ${{ format('{0}-{1}', 'ts', inputs.name) }}
     secrets:
       SUPER_SECRET: "hello there"
